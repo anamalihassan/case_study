@@ -1,5 +1,7 @@
 {
-  "home": "Discover",
-  "favourite": "My Spaces",
-  "account": "Profile"
+  "discover": "Discover",
+  "my_booking": "My Bookin",
+  "add": "Add",
+  "my_spaces": "My Spaces",
+  "profile": "Profile"
 }

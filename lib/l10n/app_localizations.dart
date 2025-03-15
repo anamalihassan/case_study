@@ -93,23 +93,35 @@ abstract class AppLocalizations {
     Locale('en')
   ];
 
-  /// No description provided for @home.
+  /// No description provided for @discover.
   ///
   /// In en, this message translates to:
   /// **'Discover'**
-  String get home;
+  String get discover;
 
-  /// No description provided for @favourite.
+  /// No description provided for @my_booking.
+  ///
+  /// In en, this message translates to:
+  /// **'My Bookin'**
+  String get my_booking;
+
+  /// No description provided for @add.
+  ///
+  /// In en, this message translates to:
+  /// **'Add'**
+  String get add;
+
+  /// No description provided for @my_spaces.
   ///
   /// In en, this message translates to:
   /// **'My Spaces'**
-  String get favourite;
+  String get my_spaces;
 
-  /// No description provided for @account.
+  /// No description provided for @profile.
   ///
   /// In en, this message translates to:
   /// **'Profile'**
-  String get account;
+  String get profile;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

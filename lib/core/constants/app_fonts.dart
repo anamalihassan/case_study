@@ -6,4 +6,5 @@ class AppFonts {
   static const double bodySize = 14;
   static const double captionSize = 12;
   static const double smallSize = 10;
+  static const double menuTitleSize = 11;
 }

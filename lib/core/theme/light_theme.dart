@@ -27,7 +27,7 @@ final ThemeData lightTheme = ThemeData(
     bodySmall: TextStyle(color: AppColors.black),
   ),
   bottomNavigationBarTheme: const BottomNavigationBarThemeData(
-    backgroundColor: AppColors.backgroundGrey,
+    backgroundColor: AppColors.white,
     selectedItemColor: AppColors.menuItemColorSelected,
     unselectedItemColor: AppColors.menuItemColorUnselected,
   ),

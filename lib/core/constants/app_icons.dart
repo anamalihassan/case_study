@@ -1,8 +1,7 @@
 const String svgsPath = 'assets/svgs/';
 
-const String menuIconHome = '${svgsPath}menu/ic_home.svg';
-const String menuIconSearch = '${svgsPath}menu/ic_search.svg';
-const String menuIconFavourite = '${svgsPath}menu/ic_favourite.svg';
-const String menuIconAccount = '${svgsPath}menu/ic_account.svg';
-const String icHelpOutline = '${svgsPath}/help_outline.svg';
-const String icMood = '${svgsPath}/mood.svg';
+const String menuIconDiscover = '${svgsPath}menu/ic_location.svg';
+const String menuIconMyBooking = '${svgsPath}menu/ic_ticket.svg';
+const String menuIconPlus = '${svgsPath}menu/ic_plus.svg';
+const String menuIconMySpaces = '${svgsPath}menu/ic_laptop.svg';
+const String menuIconProfile = '${svgsPath}menu/ic_profile.svg';
