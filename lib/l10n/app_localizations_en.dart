@@ -23,4 +23,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get find => 'Find...';
+
+  @override
+  String get favourites => 'Favourites';
 }

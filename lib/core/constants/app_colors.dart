@@ -15,8 +15,9 @@ class AppColors {
   static const menuItemColorUnselected = Color(0xFF9C9C9C);
   static const darkMenuItemColorSelected = Color(0xFF1976D2);
   static const darkMenuItemColorUnselected = Color(0xFFF8F9F9);
-  static const Color backgroundGreen = Color(0xFF85BC39);
+  static const Color backgroundGreen = Color(0xFF01C265);
   static const darkScreenBackgroundColor = Color(0xFF0C0F13);
   static const searchBorderColor = Color(0xFFF0F0F0);
   static const textHintColor = Color(0xFFBBBBBB);
+  static const unselectedTab = Color(0xFF6B6B6B);
 }
