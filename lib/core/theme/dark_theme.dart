@@ -40,6 +40,8 @@ final ThemeData darkTheme = ThemeData(
       accent: AppColors.darkMenuItemColorSelected,
       secondaryColor: AppColors.secondary,
       ratingBackgroundColor: AppColors.ratingYellowColor,
+      searchBorderColor: AppColors.searchBorderColor,
+      textHintColor: AppColors.textHintColor,
     ),
   ],
 );

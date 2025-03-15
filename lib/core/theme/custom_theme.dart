@@ -4,11 +4,15 @@ class CustomAppTheme extends ThemeExtension<CustomAppTheme> {
   Color? accent;
   Color? secondaryColor;
   Color? ratingBackgroundColor;
+  Color? searchBorderColor;
+  Color? textHintColor;
 
   CustomAppTheme({
     this.accent,
     this.secondaryColor,
     this.ratingBackgroundColor,
+    this.searchBorderColor,
+    this.textHintColor,
   });
 
   @override
@@ -17,6 +21,8 @@ class CustomAppTheme extends ThemeExtension<CustomAppTheme> {
       accent: accent,
       secondaryColor: secondaryColor,
       ratingBackgroundColor: ratingBackgroundColor,
+      searchBorderColor: searchBorderColor,
+      textHintColor: textHintColor,
     );
   }
 
@@ -29,6 +35,8 @@ class CustomAppTheme extends ThemeExtension<CustomAppTheme> {
       accent: Color.lerp(accent, other.accent, t),
       secondaryColor: Color.lerp(secondaryColor, other.secondaryColor, t),
       ratingBackgroundColor: Color.lerp(ratingBackgroundColor, other.ratingBackgroundColor, t),
+      searchBorderColor: Color.lerp(searchBorderColor, other.searchBorderColor, t),
+      textHintColor: Color.lerp(textHintColor, other.textHintColor, t),
     );
   }
 }

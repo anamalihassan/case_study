@@ -122,6 +122,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Profile'**
   String get profile;
+
+  /// No description provided for @find.
+  ///
+  /// In en, this message translates to:
+  /// **'Find...'**
+  String get find;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

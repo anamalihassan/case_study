@@ -41,6 +41,8 @@ final ThemeData lightTheme = ThemeData(
       accent: AppColors.accent,
       secondaryColor: AppColors.secondary,
       ratingBackgroundColor: AppColors.ratingYellowColor,
+      searchBorderColor: AppColors.searchBorderColor,
+      textHintColor: AppColors.textHintColor,
     ),
   ],
 );
