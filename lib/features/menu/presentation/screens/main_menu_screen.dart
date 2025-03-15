@@ -36,6 +36,14 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Image.asset(
+          appHeaderLogo,
+          width: 121,
+          height: 24,
+        ),
+        shadowColor: Colors.transparent,
+      ),
       body: _prepareTabView(),
     );
   }

@@ -17,7 +17,7 @@ final ThemeData lightTheme = ThemeData(
   ),
   appBarTheme: const AppBarTheme(
     titleTextStyle: TextStyle(color: AppColors.white),
-    backgroundColor: AppColors.accent,
+    backgroundColor: AppColors.white,
     foregroundColor: Colors.white,
     shadowColor: AppColors.black,
   ),

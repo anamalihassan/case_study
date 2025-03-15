@@ -102,7 +102,7 @@ abstract class AppLocalizations {
   /// No description provided for @my_booking.
   ///
   /// In en, this message translates to:
-  /// **'My Bookin'**
+  /// **'My Booking'**
   String get my_booking;
 
   /// No description provided for @add.

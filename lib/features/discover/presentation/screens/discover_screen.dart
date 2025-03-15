@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../../core/constants/app_colors.dart';
 import '../../../../core/constants/app_fonts.dart';
 import '../../../../l10n/app_localizations.dart';
 
@@ -8,7 +9,8 @@ class DiscoverScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return Container(
+      color: AppColors.white,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

@@ -10,7 +10,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get discover => 'Discover';
 
   @override
-  String get my_booking => 'My Bookin';
+  String get my_booking => 'My Booking';
 
   @override
   String get add => 'Add';
