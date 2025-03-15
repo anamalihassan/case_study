@@ -28,7 +28,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
   final List<MenuItem> _menuItems = [
     MenuItem(title: AppLocalizations.of(Get.context!)!.discover, icon: menuIconDiscover),
     MenuItem(title: AppLocalizations.of(Get.context!)!.my_booking, icon: menuIconMyBooking),
-    MenuItem(title: AppLocalizations.of(Get.context!)!.add, icon: menuIconPlus),
+    MenuItem(title: AppLocalizations.of(Get.context!)!.add, icon: menuIconPlus, color: AppColors.white),
     MenuItem(title: AppLocalizations.of(Get.context!)!.my_spaces, icon: menuIconMySpaces),
     MenuItem(title: AppLocalizations.of(Get.context!)!.profile, icon: menuIconProfile),
   ];
@@ -84,7 +84,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
           item.icon,
           height: 24,
           colorFilter: ColorFilter.mode(
-            item.title == "Add" ? AppColors.white : Theme.of(context).bottomNavigationBarTheme.selectedItemColor ?? AppColors.menuItemColorUnselected,
+            item.color ?? Theme.of(context).bottomNavigationBarTheme.selectedItemColor ?? AppColors.menuItemColorUnselected,
             BlendMode.srcIn,
           ),
         ),
@@ -92,7 +92,7 @@ class _MainMenuScreenState extends State<MainMenuScreen> {
           item.icon,
           height: 24,
           colorFilter: ColorFilter.mode(
-            item.title == "Add" ? AppColors.white : Theme.of(context).bottomNavigationBarTheme.unselectedItemColor ?? AppColors.menuItemColorUnselected,
+            item.color ?? Theme.of(context).bottomNavigationBarTheme.unselectedItemColor ?? AppColors.menuItemColorUnselected,
             BlendMode.srcIn,
           ),
         ),
