@@ -10,6 +10,7 @@ class DiscoverItemDto {
   String? address;
   String? distance;
   List<String>? images;
+  String? thumbnail;
 
   DiscoverItemDto({
     this.name,
@@ -18,6 +19,7 @@ class DiscoverItemDto {
     this.address,
     this.distance,
     this.images,
+    this.thumbnail,
   });
 
   factory DiscoverItemDto.fromJson(Map<String, dynamic> json) => _$DiscoverItemDtoFromJson(json);

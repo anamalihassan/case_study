@@ -12,6 +12,8 @@ class DiscoverInitial extends DiscoverState {}
 
 class FetchDiscoverWorkplacesDataLoading extends DiscoverState {}
 
+class FetchDiscoverHeaderPromotionDataLoading extends DiscoverState {}
+
 class FetchDiscoverWorkplacesDataSuccess extends DiscoverState {
   final List<DiscoverItemDto> discoverItems;
   FetchDiscoverWorkplacesDataSuccess({
@@ -19,6 +21,26 @@ class FetchDiscoverWorkplacesDataSuccess extends DiscoverState {
   });
   @override
   List<Object> get props => [discoverItems];
+}
+
+class FetchDiscoverHeaderPromotionDataSuccess extends DiscoverState {
+  final List<DiscoverItemDto> discoverItems;
+  FetchDiscoverHeaderPromotionDataSuccess({
+    required this.discoverItems,
+  });
+  @override
+  List<Object> get props => [discoverItems];
+}
+
+class FetchDiscoverHeaderPromotionDataFailure extends DiscoverState {
+  final NetworkException networkException;
+
+  FetchDiscoverHeaderPromotionDataFailure({
+    required this.networkException,
+  });
+
+  @override
+  List<Object> get props => [networkException];
 }
 
 class FetchDiscoverWorkplacesDataFailure extends DiscoverState {

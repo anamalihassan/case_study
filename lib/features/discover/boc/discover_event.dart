@@ -6,3 +6,5 @@ abstract class DiscoverEvent extends Equatable {
 }
 
 class FetchDiscoverWorkplacesDataEvent extends DiscoverEvent {}
+
+class FetchDiscoverHeaderPromotionDataEvent extends DiscoverEvent {}

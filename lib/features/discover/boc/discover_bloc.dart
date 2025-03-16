@@ -12,6 +12,7 @@ class DiscoverBloc extends Bloc<DiscoverEvent, DiscoverState> {
       : _repository = repository,
         super(DiscoverInitial()) {
     on<FetchDiscoverWorkplacesDataEvent>(mapFetchDiscoverWorkplacesDataEventToState);
+    on<FetchDiscoverHeaderPromotionDataEvent>(mapFetchDiscoverHeaderPromotionDataEventToState);
   }
 
   Future<void> mapFetchDiscoverWorkplacesDataEventToState(
@@ -26,6 +27,21 @@ class DiscoverBloc extends Bloc<DiscoverEvent, DiscoverState> {
       emit(FetchDiscoverWorkplacesDataFailure(networkException: e));
     } catch (err) {
       emit(FetchDiscoverWorkplacesDataFailure(networkException: NetworkException()));
+    }
+  }
+
+  Future<void> mapFetchDiscoverHeaderPromotionDataEventToState(
+    FetchDiscoverHeaderPromotionDataEvent event,
+    Emitter<DiscoverState> emit,
+  ) async {
+    emit(FetchDiscoverHeaderPromotionDataLoading());
+    try {
+      final response = await _repository.fetchDiscoverHeaderPromotionData();
+      emit(FetchDiscoverHeaderPromotionDataSuccess(discoverItems: response));
+    } on NetworkException catch (e) {
+      emit(FetchDiscoverHeaderPromotionDataFailure(networkException: e));
+    } catch (err) {
+      emit(FetchDiscoverHeaderPromotionDataFailure(networkException: NetworkException()));
     }
   }
 }

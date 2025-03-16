@@ -3,6 +3,7 @@ import 'package:case_study/features/discover/boc/discover_event.dart';
 import 'package:case_study/features/discover/boc/discover_state.dart';
 import 'package:case_study/features/discover/data/model/discover_item_dto.dart';
 import 'package:case_study/features/discover/presentation/widgets/discover_listing_item_widget.dart';
+import 'package:case_study/features/discover/presentation/widgets/header_slider_view.dart';
 import 'package:case_study/features/discover/presentation/widgets/tab_button_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,7 +26,9 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
   List<DiscoverItemDto> discoverItems = [];
 
   void fetchData() async {
-    context.read<DiscoverBloc>().add(FetchDiscoverWorkplacesDataEvent());
+    Future.delayed(const Duration(seconds: 1), () {
+      context.read<DiscoverBloc>().add(FetchDiscoverWorkplacesDataEvent());
+    });
   }
 
   @override
@@ -43,8 +46,12 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
         child: Column(
           children: [
             const Padding(
-              padding: EdgeInsets.fromLTRB(16, 0, 16, 12),
+              padding: EdgeInsets.fromLTRB(16, 0, 16, 0),
               child: SearchWidget(),
+            ),
+            const Padding(
+              padding: EdgeInsets.symmetric(vertical: 16.0),
+              child: HeaderSliderView(),
             ),
             Row(
               children: [
@@ -86,39 +93,36 @@ class _DiscoverScreenState extends State<DiscoverScreen> {
   }
 
   Widget _buildDiscoverListingBloc() {
-    return BlocListener<DiscoverBloc, DiscoverState>(
-      listener: (context, state) {},
-      child: BlocBuilder<DiscoverBloc, DiscoverState>(
-        builder: (context, state) {
-          if (state is FetchDiscoverWorkplacesDataSuccess) {
-            discoverItems = state.discoverItems;
-          } else if (state is FetchDiscoverWorkplacesDataFailure) {
-            return InfoWidget(
-              title: AppLocalizations.of(context)!.failureTitle,
-              message: state.networkException.statusMessage ?? AppLocalizations.of(context)!.tryAgainMessage,
-            );
-          } else if (state is FetchDiscoverWorkplacesDataLoading) {
-            return const Center(
-              child: CircularProgressIndicator(),
-            );
-          }
-          return ListView.separated(
-            itemCount: discoverItems.length,
-            physics: const NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemBuilder: (context, index) {
-              return DiscoverListingItemWidget(discoverItemDto: discoverItems[index]);
-            },
-            separatorBuilder: (context, index) {
-              return Container(
-                margin: const EdgeInsets.symmetric(vertical: 16.0),
-                color: AppColors.dividerGrey,
-                height: 1,
-              );
-            },
+    return BlocBuilder<DiscoverBloc, DiscoverState>(
+      builder: (context, state) {
+        if (state is FetchDiscoverWorkplacesDataSuccess) {
+          discoverItems = state.discoverItems;
+        } else if (state is FetchDiscoverWorkplacesDataFailure) {
+          return InfoWidget(
+            title: AppLocalizations.of(context)!.failureTitle,
+            message: state.networkException.statusMessage ?? AppLocalizations.of(context)!.tryAgainMessage,
           );
-        },
-      ),
+        } else if (state is FetchDiscoverWorkplacesDataLoading) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        }
+        return ListView.separated(
+          itemCount: discoverItems.length,
+          physics: const NeverScrollableScrollPhysics(),
+          shrinkWrap: true,
+          itemBuilder: (context, index) {
+            return DiscoverListingItemWidget(discoverItemDto: discoverItems[index]);
+          },
+          separatorBuilder: (context, index) {
+            return Container(
+              margin: const EdgeInsets.symmetric(vertical: 16.0),
+              color: AppColors.dividerGrey,
+              height: 1,
+            );
+          },
+        );
+      },
     );
   }
 }

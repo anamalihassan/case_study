@@ -15,6 +15,7 @@ DiscoverItemDto _$DiscoverItemDtoFromJson(Map<String, dynamic> json) =>
       distance: json['distance'] as String?,
       images:
           (json['images'] as List<dynamic>?)?.map((e) => e as String).toList(),
+      thumbnail: json['thumbnail'] as String?,
     );
 
 Map<String, dynamic> _$DiscoverItemDtoToJson(DiscoverItemDto instance) =>
@@ -25,4 +26,5 @@ Map<String, dynamic> _$DiscoverItemDtoToJson(DiscoverItemDto instance) =>
       'address': instance.address,
       'distance': instance.distance,
       'images': instance.images,
+      'thumbnail': instance.thumbnail,
     };
