@@ -134,6 +134,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Favourites'**
   String get favourites;
+
+  /// No description provided for @failureTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get failureTitle;
+
+  /// No description provided for @tryAgainMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Please try again.'**
+  String get tryAgainMessage;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

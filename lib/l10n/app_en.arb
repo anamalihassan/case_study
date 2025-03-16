@@ -5,5 +5,7 @@
   "my_spaces": "My Spaces",
   "profile": "Profile",
   "find": "Find...",
-  "favourites": "Favourites"
+  "favourites": "Favourites",
+  "failureTitle": "Something went wrong",
+  "tryAgainMessage": "Please try again."
 }

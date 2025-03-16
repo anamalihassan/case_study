@@ -26,4 +26,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get favourites => 'Favourites';
+
+  @override
+  String get failureTitle => 'Something went wrong';
+
+  @override
+  String get tryAgainMessage => 'Please try again.';
 }
