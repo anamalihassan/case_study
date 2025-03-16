@@ -8,7 +8,7 @@ class AppColors {
   static const Color white = Color(0xFFFFFFFF);
   static const Color black = Color(0xFF000000);
 
-  static const Color dividerGrey = Color(0xFFE9E9E9);
+  static const Color dividerGrey = Color(0xFFF0F0F0);
   static const Color backgroundGrey = Color(0xFFf6f6f6);
   static const Color ratingYellowColor = Color(0xFFFDCA4F);
   static const menuItemColorSelected = Color(0xFF01C265);
@@ -20,4 +20,5 @@ class AppColors {
   static const searchBorderColor = Color(0xFFF0F0F0);
   static const textHintColor = Color(0xFFBBBBBB);
   static const unselectedTab = Color(0xFF6B6B6B);
+  static const greyTextColor = Color(0xFF616161);
 }

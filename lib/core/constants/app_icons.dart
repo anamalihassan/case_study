@@ -8,5 +8,7 @@ const String menuIconMySpaces = '${svgsPath}menu/ic_laptop.svg';
 const String menuIconProfile = '${svgsPath}menu/ic_profile.svg';
 const String iconSearch = '${svgsPath}ic_search.svg';
 const String iconFilter = '${svgsPath}ic_filter.svg';
+const String iconPersonSimpleWalk = '${svgsPath}ic_person_simple_walk.svg';
+const String iconStar = '${svgsPath}ic_star.svg';
 
 const String appHeaderLogo = '${imagesPath}logo.png';
